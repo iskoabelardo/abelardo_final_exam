@@ -1,0 +1,10 @@
+---
+# tasks file for git_clone
+
+- name: Cloning Prelim Exam on Ubuntu
+  git:
+    repo: https://github.com/iskoabelardo/Abelardo_PrelimExam.git
+    dest: /home/angelo/abelardo_prelim_exam
+    clone: yes
+    update: yes
+  when: ansible_facts['distribution'] == 'Ubuntu'
